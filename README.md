@@ -5,7 +5,8 @@ Fuzz testing has become one of the de facto standard techniques for bug finding 
 
 ## Environment
 - Tested on Ubuntu 16.04 64bit, 18.04 64bit and 20.04 64bit
-- Installation of gllvm is required
+- Installation of [ gllvm ](https://cran.r-project.org/web/packages/gllvm/index.html) is required
+- [ Go ](https://go.dev/) Installation is recommended for running instance concurrently
 
 ## Usage
 
@@ -38,7 +39,7 @@ $ get-bc [ target_binary_instru ]
 
 ~~~~
  
-### Instrumentations : we provide two intrumentations following different task distrubution rules(based on CFG-edges or CFG-paths). Feel free to pick one for your fuzzing works.
+### Instrumentations : we provide two intrumentations following different task distrubution rules(based on CFG-edges or CFG-paths). Feel free to pick one for your fuzzing works. [ How to build the passes ](passes)
 
 ~~~~{.sh}
 
@@ -59,6 +60,14 @@ $ clang++ -o [ target_binary_path ] [ target_binary_path.bc ] -ldl passes/CFG_pa
 
 ### Start Fuzzing : 
 #### step 1 : running desired number of fuzzing instances concurrently
+
+~~~~{.sh}
+
+$ go run afl-launch/main.go -afl afl/afl-fuzz -i [ seed_dir ] -no-master -name afl -o [ output_dir ] -n [ # of instances ] -- [ target_binary_afl ] [ option ] @@
+
+~~~~
+
+
 #### step 2 : runing task distribution tool by following command 
 
 ~~~~{.sh}
