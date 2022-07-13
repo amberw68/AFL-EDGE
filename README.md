@@ -86,7 +86,7 @@ $ bash scripts/path_scheduling/schedule_shell.sh -b [ target_binary_path ] -s [ 
 
 Facilitating Parallel Fuzzing with Mutually-exclusive Task Distribution
 
-@inproceedings{yun:qsym,
+@inproceedings{wang:afledge,
   title        = {{Facilitating Parallel Fuzzing with Mutually-exclusive Task Distribution}},
   author       = {Yifan Wang and Yuchen Zhang and Chengbin Pang and Peng Li and Nikolaos Triandopoulos and Jun Xu},
   booktitle    = {Proceedings of the 17th EAI International Conference on Security and Privacy in Communication Networks (SecureComm)},
