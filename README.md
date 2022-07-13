@@ -81,7 +81,7 @@ $ bash scripts/path_scheduling/schedule_shell.sh -b [ target_binary_path ] -s [ 
 ~~~~
 
 ## Publications
-
+#### [ Read Paper ](https://arxiv.org/pdf/2109.08635.pdf)
 ~~~~{.sh}
 
 Facilitating Parallel Fuzzing with Mutually-exclusive Task Distribution
