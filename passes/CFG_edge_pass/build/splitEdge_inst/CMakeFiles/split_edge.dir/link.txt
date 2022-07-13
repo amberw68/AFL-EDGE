@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared  -o libsplit_edge.so CMakeFiles/split_edge.dir/split_edge.cpp.o   -L/usr/local/lib 
